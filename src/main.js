@@ -214,8 +214,7 @@ app.on('ready', function() {
     // follow Electron's defaults
     window_options = {};
   }
-  if (process.platform === 'win32' || process.platform === 'linux') {
-    // On HiDPI Windows environment, the taskbar icon is pixelated. So this line is necessary.
+  if (process.platform === 'linux') {
     window_options.icon = path.resolve(__dirname, 'resources/appicon.png');
   }
   window_options.fullScreenable = true;
